@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EnterAnimation - Framer Motion Animation Showcase
 
-## Getting Started
+## Overview
+This project demonstrates various animations using [Framer Motion](https://www.framer.com/motion/). It includes different animation techniques such as scaling, rotation, hover effects, exit animations, and shared layouts.
 
-First, run the development server:
+## Installation
+To run this project locally, install dependencies and start the development server:
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Components & Animations
+Each button in the interface corresponds to an animation type, which is displayed inside a bordered container.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Ball Glimmer (B.G)
+- **Animation:** The ball scales up from 0 to 1 and fades in.
+- **Techniques Used:** Initial & animate props, spring transition.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Box Rotate (B.R)
+- **Animation:** A box rotates 360 degrees continuously.
+- **Techniques Used:** Animate with rotation property.
 
-## Learn More
+### 3. Transform Hover (T.H)
+- **Animation:** Moves slightly on load and scales up on hover.
+- **Techniques Used:** Initial & animate props, `whileHover`, `whileTap`.
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Exit Animation (Exit)
+- **Animation:** A box appears and disappears on button click with scale and opacity effects.
+- **Techniques Used:** `AnimatePresence`, exit animations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Shared Layout Animation (Layout)
+- **Animation:** Tab switching with a shared underline animation.
+- **Techniques Used:** `layoutId`, animated tabs with transition effects.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 6. Gestures (Genstures)
+- **Animation:** A box scales, rotates, and reacts to drag gestures.
+- **Techniques Used:** `whileHover`, `whileTap`, `whileDrag`, `drag`.
 
-## Deploy on Vercel
+### 7. Variants (Var)
+- **Animation:** Expanding/collapsing navigation panel using variants.
+- **Techniques Used:** Variants API, ref for measuring dimensions dynamically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
+You can customize animations by modifying transition properties and animation values inside each component.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Credits
+Built using Framer Motion and React.
+
